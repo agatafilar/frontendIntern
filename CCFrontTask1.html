@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	.tooltip {
+		position: relative;
+		display: inline-block;
+		border-bottom: 1.5px dotted red; 
+	}
+
+	.tooltip .tooltiptext {
+		width: 200px;
+		bottom: 100%;
+		left: 50%; 
+		margin-left: -100px; 
+		margin-bottom: 10px;
+		visibility: hidden;
+		background-color: #FF5722;
+		color: #fff;
+		padding: 6px 5px;
+		border-radius: 4px;
+		position: absolute;	
+		
+	}
+
+	.tooltip .tooltiptext::after {
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		margin-left: -10px;
+		border-width: 10px;
+		border-style: solid;
+		border-color: #FF5722 transparent transparent transparent;
+
+	}
+	
+	.tooltip:hover .tooltiptext {
+		visibility: visible;
+		cursor: pointer; 
+		cursor: hand;
+	}
+	</style>
+</head>
+<body>
+	<br><br><br>This is an awsome
+	<div class="tooltip">tooltip
+	  <span class="tooltiptext" >It's so cool</span>
+	</div>
+</body>
+</html>
